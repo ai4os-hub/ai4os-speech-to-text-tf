@@ -6,6 +6,9 @@ ARG tag=1.14.0-py3
 # Base image, e.g. tensorflow/tensorflow:1.12.0-py3
 FROM tensorflow/tensorflow:${tag}
 
+ARG branch=main
+ARG tag
+
 # Add container's metadata to appear along the models metadata
 ENV CONTAINER_MAINTAINER "Lara Lloret Iglesias <lloret@ifca.unican.es>"
 ENV CONTAINER_VERSION "0.1"
