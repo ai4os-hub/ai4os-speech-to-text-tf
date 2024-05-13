@@ -1,7 +1,7 @@
 DEEP Open Catalogue: Speech to Text
 ====================================
 
-[![Build Status](https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/speech-to-text-tf/master)](https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/speech-to-text-tf/job/master/)
+[![Build Status](https://jenkins.services.ai4os.eu/buildStatus/icon?job=AI4OS-hub/ai4os-speech-to-text-tf/main)](https://jenkins.services.ai4os.eu/job/AI4OS-hub/job/ai4os-speech-to-text-tf/job/main//)
 
 
 **Author:** [Lara Lloret Iglesias](https://github.com/laramaktub) (CSIC)
@@ -40,7 +40,7 @@ You can find more information about it in the [DEEP Marketplace](https://marketp
 To start using this framework clone the repo:
 
 ```bash
-git clone https://github.com/deephdc/speech-to-text-tf
+git clone https://github.com/ai4os-hub/ai4os-speech-to-text-tf
 cd speech-to-text-tf
 pip install -e .
 ```
@@ -52,12 +52,12 @@ and open http://0.0.0.0:5000/ui and look for the methods belonging to the `speec
 
 ### Docker installation
 
-We have also prepared a ready-to-use [Docker container](https://github.com/deephdc/DEEP-OC-speech-to-text-tf) to
+We have also prepared a ready-to-use [Docker container](https://github.com/ai4os-hub/ai4os-speech-to-text-tf) to
 run this module. To run it:
 
 ```bash
 docker search deephdc
-docker run -ti -p 5000:5000 -p 6006:6006 -p 8888:8888 deephdc/deep-oc-speech-to-text-tf
+docker run -ti -p 5000:5000 -p 6006:6006 -p 8888:8888 ai4oshub/ai4os-speech-to-text-tf
 ```
 
 Now open http://0.0.0.0:5000/ui and look for the methods belonging to the `speechclas` module.
