@@ -14,6 +14,13 @@ ENV CONTAINER_MAINTAINER "Lara Lloret Iglesias <lloret@ifca.unican.es>"
 ENV CONTAINER_VERSION "0.1"
 ENV CONTAINER_DESCRIPTION "DEEP as a Service Container: Speech To Text"
 
+# 2024: need to re-add GPG keys for Nvidia repos but only in the case of GPU images
+# Note for GPU build: see https://askubuntu.com/questions/1444943/nvidia-gpg-error-the-following-signatures-couldnt-be-verified-because-the-publi
+RUN if [[ "$tag" =~ "-gpu" ]]; then \
+    apt-key del 7fa2af80 ; \
+    curl https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub | apt-key add - ; \
+    curl https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/7fa2af80.pub | apt-key add - ; fi
+
 # Install ubuntu updates and python related stuff
 # link python3 to python, pip3 to pip, if needed
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
