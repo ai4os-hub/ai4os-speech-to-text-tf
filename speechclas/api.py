@@ -23,6 +23,7 @@ from datetime import datetime
 import pkg_resources
 import builtins
 import re
+import tempfile
 from collections import OrderedDict
 
 import urllib.request
@@ -204,13 +205,15 @@ def predict_url(args):
         load_inference_model()
 
     # Download the url
-    urllib.request.urlretrieve(args['urls'][0], '/tmp/file.wav')
-    pred_lab, pred_prob = label_wav.predict('/tmp/file.wav',
-                                            LABELS_FILE,
-                                            MODEL_NAME,
-                                            "wav_data:0",
-                                            "labels_softmax:0",
-                                            3)
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmpfile = os.path.join(tmpdir, "file.wav")
+        urllib.request.urlretrieve(args['urls'][0], tmpfile)
+        pred_lab, pred_prob = label_wav.predict(tmpfile,
+                                                LABELS_FILE,
+                                                MODEL_NAME,
+                                                "wav_data:0",
+                                                "labels_softmax:0",
+                                                3)
 
     return format_prediction(pred_lab, pred_prob)
 
