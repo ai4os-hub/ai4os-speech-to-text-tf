@@ -41,7 +41,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'DEEP-OC-image-classification'
+project = u'ai4os-speech-to-text-tf'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -185,7 +185,7 @@ latex_elements = {
 latex_documents = [
     ('index',
      'speechclas.tex',
-     u'DEEP-OC-speech-to-text-tf on Documentation',
+     u'ai4os-speech-to-text-tf on Documentation',
      u"Lara Lloret Iglesias (CSIC)", 'manual'),
 ]
 
@@ -215,7 +215,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'speechclas', u'DEEP-OC-image-classification Documentation',
+    ('index', 'speechclas', u'ai4os-speech-to-text Documentation',
      [u"Lara Lloret Iglesias (CSIC)"], 1)
 ]
 
@@ -229,8 +229,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    ('index', 'speechclas', u'DEEP-OC-speech-to-text-tf Documentation',
-     u"Lara Lloret Iglesias (CSIC)", 'DEEP-OC-speech-to-text-tf',
+    ('index', 'speechclas', u'ai4os-speech-to-text-tf Documentation',
+     u"Lara Lloret Iglesias (CSIC)", 'ai4os-speech-to-text-tf',
      'This is a plug-and-play tool to train and evaluate a speech to text model using deep neural networks.', 'Miscellaneous'),
 ]
 

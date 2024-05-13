@@ -11,7 +11,7 @@ received funding from the European Union’s Horizon 2020 research and innovatio
 
 This is a plug-and-play tool to train and evaluate a speech to text tool using deep neural networks.
 
-You can find more information about it in the [DEEP Marketplace](https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-satsr.html).
+You can find more information about it in the [AI4OS Hub](https://dashboard.cloud.ai4eosc.eu/marketplace).
 
 **Table of contents**
 1. [Installing this module](#installing-this-module)
@@ -41,7 +41,7 @@ To start using this framework clone the repo:
 
 ```bash
 git clone https://github.com/ai4os-hub/ai4os-speech-to-text-tf
-cd speech-to-text-tf
+cd ai4os-speech-to-text-tf
 pip install -e .
 ```
 now run DEEPaaS:
@@ -52,11 +52,10 @@ and open http://0.0.0.0:5000/ui and look for the methods belonging to the `speec
 
 ### Docker installation
 
-We have also prepared a ready-to-use [Docker container](https://github.com/ai4os-hub/ai4os-speech-to-text-tf) to
-run this module. To run it:
+We have also prepared a ready-to-use Docker container to run this module. To run it:
 
 ```bash
-docker search deephdc
+docker search ai4oshub
 docker run -ti -p 5000:5000 -p 6006:6006 -p 8888:8888 ai4oshub/ai4os-speech-to-text-tf
 ```
 
