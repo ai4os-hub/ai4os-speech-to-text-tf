@@ -30,14 +30,14 @@ class TestModelMethods(unittest.TestCase):
         Test that get_metadata() returns right values (subset)
         """
         self.assertEqual(
-            self.meta["name"].lower().replace("-", "_"),
+            self.meta["Name"].lower().replace("-", "_"),
             "speechclas".lower().replace("-", "_"),
         )
         self.assertEqual(
-            self.meta["author"].lower(), "Lara Lloret".lower()
+            self.meta["Author"].lower(), "Lara Lloret".lower()
         )
         self.assertEqual(
-            self.meta["license"].lower(),
+            self.meta["License"].lower(),
             "Apache".lower(),
         )
 
