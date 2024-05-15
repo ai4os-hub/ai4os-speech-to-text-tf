@@ -8,7 +8,7 @@
     "The container does not come with any pretrained model, it has to be trained first on a dataset to be used for prediction.\n",
     "The PREDICT method expects an audio files as input (or the url of an audio file) and will return a JSON with ",
     "the top 5 predictions.\n",
-    "<img class='fit', src='https://raw.githubusercontent.com/ai4oshub/ai4os-speech-to-text-tf/main/images/speech-to-text.png'/>\n",
+    "<img class='fit', src='https://raw.githubusercontent.com/ai4os-hub/ai4os-speech-to-text-tf/main/reports/figures/speech-to-text.png'/>\n",
     "**References**\n",
     "[1]: https://www.tensorflow.org/tutorials/sequences/audio_recognition \n",
     "[2]: https://static.googleusercontent.com/media/research.google.com/es/pubs/archive/43969.pdf \n"
