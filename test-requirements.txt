@@ -1,4 +1,4 @@
-tensorflow==1.14.0
+tensorflow==2.12.1
 flake8
 pylint
 pytest
